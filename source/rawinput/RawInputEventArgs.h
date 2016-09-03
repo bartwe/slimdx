@@ -27,7 +27,7 @@ namespace SlimDX
 {
 	namespace RawInput
 	{
-		public ref class RawInputEventArgs : System::EventArgs
+		public value struct RawInputEventArgs
 		{
 		public:
 			RawInputEventArgs( int dataSize, int count, array<System::Byte>^ rawData, System::IntPtr device )

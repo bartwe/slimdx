@@ -94,7 +94,7 @@ namespace RawInput
 
 			if( rawInput->header.dwType == RIM_TYPEKEYBOARD )
 			{
-				KeyboardInput( nullptr, gcnew KeyboardInputEventArgs( rawInput->data.keyboard.MakeCode,
+				KeyboardInput( KeyboardInputEventArgs( rawInput->data.keyboard.MakeCode,
 					static_cast<ScanCodeFlags>( rawInput->data.keyboard.Flags ),
 					static_cast<Keys>( rawInput->data.keyboard.VKey ),
 					static_cast<KeyState>( rawInput->data.keyboard.Message ),
@@ -102,7 +102,7 @@ namespace RawInput
 			}
 			else if( rawInput->header.dwType == RIM_TYPEMOUSE )
 			{
-				MouseInput( nullptr, gcnew MouseInputEventArgs( static_cast<MouseMode>( rawInput->data.mouse.usFlags ),
+				MouseInput( MouseInputEventArgs( static_cast<MouseMode>( rawInput->data.mouse.usFlags ),
 					static_cast<MouseButtonFlags>( rawInput->data.mouse.usButtonFlags ),
 					static_cast<short>( rawInput->data.mouse.usButtonData ),
 					rawInput->data.mouse.ulRawButtons,
@@ -117,7 +117,7 @@ namespace RawInput
 				for( int i = 0; i < length; i++ )
 					bytes[i] = rawInput->data.hid.bRawData[i];
 
-				RawInput( nullptr, gcnew RawInputEventArgs( rawInput->data.hid.dwSizeHid, rawInput->data.hid.dwCount, bytes, IntPtr( rawInput->header.hDevice ) ) );
+				RawInput( RawInputEventArgs( rawInput->data.hid.dwSizeHid, rawInput->data.hid.dwCount, bytes, IntPtr( rawInput->header.hDevice ) ) );
 			}
 		}
 		finally

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug-4.0|Win32">
       <Configuration>Debug-4.0</Configuration>
@@ -62,7 +62,7 @@
     <CLRSupport>true</CLRSupport>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Public-4.0|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -71,6 +71,7 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -78,25 +79,27 @@
     <CLRSupport>true</CLRSupport>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-4.0|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-4.0|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Public|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -104,7 +107,7 @@
     <CLRSupport>true</CLRSupport>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Public-4.0|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -113,6 +116,7 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -120,25 +124,27 @@
     <CLRSupport>true</CLRSupport>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-4.0|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-4.0|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -241,7 +247,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
+      <Version>
+      </Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\x86\$(Configuration)\;$(DXSDK_DIR)Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -274,7 +281,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\x86\$(Configuration)\;$(DXSDK_DIR)Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -310,7 +316,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\$(Platform)\$(Configuration)\;$(DXSDK_DIR)Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -346,7 +351,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\$(Platform)\$(Configuration)\;$(DXSDK_DIR)Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -370,7 +374,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>$(ProjectDir)..\external\;$(ProjectDir)..\external\Effects11\Inc;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;D3D_DEBUG_INFO;WINVER=0x501;_WIN32_WINNT=0x501;DIRECTINPUT_VERSION=0x0800;XMLDOCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;D3D_DEBUG_INFO;WINVER=0x501;DIRECTINPUT_VERSION=0x0800;XMLDOCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FloatingPointModel>Precise</FloatingPointModel>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -383,7 +387,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\x86\$(Configuration)\;$(DXSDK_DIR)Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -415,7 +418,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\x86\$(Configuration)\;$(DXSDK_DIR)Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -449,7 +451,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\$(Platform)\$(Configuration)\;$(DXSDK_DIR)Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -483,7 +484,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dxgi.lib;d3d10.lib;d3dx10.lib;d3d10_1.lib;dinput8.lib;xinput.lib;dxerr.lib;ole32.lib;x3daudio.lib;xapobase.lib;winmm.lib;dsound.lib;d3dcompiler.lib;d3d11.lib;d3dx11.lib;d2d1.lib;dwrite.lib;d3dcsx.lib;Effects11.lib;advapi32.lib</AdditionalDependencies>
-      <Version>0.0.0.0</Version>
       <AdditionalLibraryDirectories>$(ProjectDir)..\external\Effects11\$(Platform)\$(Configuration)\;$(DXSDK_DIR)Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DelayLoadDLLs>d3d9.dll;d3dx9_43.dll;d3dx10_43.dll;d3dx11_43.dll;d3dcompiler_43.dll;d3dcsx_43.dll;d3d10.dll;d3d10_1.dll;d3d11.dll;d2d1.dll;dwrite.dll;dxgi.dll;dinput8.dll;x3daudio1_7.dll;xinput1_3.dll;dsound.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <GenerateDebugInformation>true</GenerateDebugInformation>

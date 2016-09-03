@@ -27,7 +27,7 @@ namespace SlimDX
 {
 	namespace RawInput
 	{
-		public ref class KeyboardInputEventArgs : System::EventArgs
+		public value struct KeyboardInputEventArgs
 		{
 		public:
 			KeyboardInputEventArgs(int makeCode, ScanCodeFlags scanCodeFlags, System::Windows::Forms::Keys key, KeyState state, long extraInformation, System::IntPtr device)
