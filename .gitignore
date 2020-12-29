@@ -1,0 +1,12 @@
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.cache
+*.tlog
+*.pdb
+*.unsuccessfulbuild
+*.lastbuildstate
+*.log
+/SlimMath/bin/
+/SlimMath/obj/

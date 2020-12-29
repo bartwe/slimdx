@@ -53,9 +53,9 @@ namespace SlimDX
 
 			static System::Collections::ObjectModel::ReadOnlyCollection<DeviceInfo^>^ GetDevices();
 
-			static event System::EventHandler<KeyboardInputEventArgs^>^ KeyboardInput;
-			static event System::EventHandler<MouseInputEventArgs^>^ MouseInput;
-			static event System::EventHandler<RawInputEventArgs^>^ RawInput;
+			static event System::Action<KeyboardInputEventArgs>^ KeyboardInput;
+			static event System::Action<MouseInputEventArgs>^ MouseInput;
+			static event System::Action<RawInputEventArgs>^ RawInput;
 		};
 	}
 }

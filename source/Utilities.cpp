@@ -420,7 +420,11 @@ namespace SlimDX
 	{
 		if( blob != NULL )
 		{
-			String^ string = gcnew String( reinterpret_cast<const char*>( blob->GetBufferPointer() ) );
+			const char* bufPtr = reinterpret_cast<const char*>(blob->GetBufferPointer());
+			if (bufPtr == NULL)
+				return String::Empty;
+
+			String^ string = gcnew String(bufPtr);
 			blob->Release();
 			return string; 
 		}

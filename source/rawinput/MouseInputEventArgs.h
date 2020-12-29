@@ -27,7 +27,7 @@ namespace SlimDX
 {
 	namespace RawInput
 	{
-		public ref class MouseInputEventArgs : System::EventArgs
+		public value struct MouseInputEventArgs
 		{
 		public:
 			MouseInputEventArgs(MouseMode mode, MouseButtonFlags buttonFlags, int wheelDelta, long rawButtons, long x, long y, long extraInformation, System::IntPtr device)
