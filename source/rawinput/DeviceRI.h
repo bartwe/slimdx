@@ -21,10 +21,7 @@
 */
 #pragma once
 
-#include "../multimedia/Enums.h"
-
 #include "Enums.h"
-#include "InputMessageFilter.h"
 #include "KeyboardInputEventArgs.h"
 #include "MouseInputEventArgs.h"
 #include "RawInputEventArgs.h"
@@ -39,16 +36,13 @@ namespace SlimDX
 		private:
 			Device() { }
 
-			static InputMessageFilter^ filter;
-
 		internal:
 			static void OnWmInput( HRAWINPUT input );
 
 		public:
-			static void RegisterDevice( SlimDX::Multimedia::UsagePage usagePage, SlimDX::Multimedia::UsageId usageId, DeviceFlags flags );
-			static void RegisterDevice( SlimDX::Multimedia::UsagePage usagePage, SlimDX::Multimedia::UsageId usageId, DeviceFlags flags, System::IntPtr target );
+			static void RegisterDevice( UsagePage usagePage, UsageId usageId, DeviceFlags flags );
+			static void RegisterDevice( UsagePage usagePage, UsageId usageId, DeviceFlags flags, System::IntPtr target );
 
-			static void RegisterDevice( SlimDX::Multimedia::UsagePage usagePage, SlimDX::Multimedia::UsageId usageId, DeviceFlags flags, System::IntPtr target, bool addThreadFilter );
 			static void HandleMessage( System::IntPtr message );
 
 			static System::Collections::ObjectModel::ReadOnlyCollection<DeviceInfo^>^ GetDevices();

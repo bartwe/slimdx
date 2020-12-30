@@ -253,6 +253,7 @@
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml">
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
@@ -309,6 +310,8 @@
     <ClCompile Include="..\source\external\DDSTextureLoader.cpp" />
     <ClCompile Include="..\source\external\dxerr.cpp" />
     <ClCompile Include="..\source\ObjectTable.cpp" />
+    <ClCompile Include="..\source\rawinput\DeviceInfo.cpp" />
+    <ClCompile Include="..\source\rawinput\DeviceRI.cpp" />
     <ClCompile Include="..\source\Result.cpp" />
     <ClCompile Include="..\source\SlimDXException.cpp" />
     <ClCompile Include="..\source\Utilities.cpp" />
@@ -515,6 +518,15 @@
     <ClInclude Include="..\source\external\dxerr.h" />
     <ClInclude Include="..\source\InternalHelpers.h" />
     <ClInclude Include="..\source\ObjectTable.h" />
+    <ClInclude Include="..\source\rawinput\DeviceInfo.h" />
+    <ClInclude Include="..\source\rawinput\DeviceRI.h" />
+    <ClInclude Include="..\source\rawinput\Enums.h" />
+    <ClInclude Include="..\source\rawinput\HidInfo.h" />
+    <ClInclude Include="..\source\rawinput\KeyboardInfo.h" />
+    <ClInclude Include="..\source\rawinput\KeyboardInputEventArgs.h" />
+    <ClInclude Include="..\source\rawinput\MouseInfo.h" />
+    <ClInclude Include="..\source\rawinput\MouseInputEventArgs.h" />
+    <ClInclude Include="..\source\rawinput\RawInputEventArgs.h" />
     <ClInclude Include="..\source\Result.h" />
     <ClInclude Include="..\source\SlimDXException.h" />
     <ClInclude Include="..\source\stack_array.h" />

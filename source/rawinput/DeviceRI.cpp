@@ -42,17 +42,12 @@ namespace SlimDX
 {
 namespace RawInput
 {
-	void Device::RegisterDevice( SlimDX::Multimedia::UsagePage usagePage, SlimDX::Multimedia::UsageId usageId, DeviceFlags flags )
+	void Device::RegisterDevice( UsagePage usagePage, UsageId usageId, DeviceFlags flags )
 	{
 		RegisterDevice( usagePage, usageId, flags, IntPtr::Zero );
 	}
 
-	void Device::RegisterDevice( SlimDX::Multimedia::UsagePage usagePage, SlimDX::Multimedia::UsageId usageId, DeviceFlags flags, IntPtr target )
-	{
-		RegisterDevice(usagePage, usageId, flags, target, true);
-	}
-
-	void Device::RegisterDevice( SlimDX::Multimedia::UsagePage usagePage, SlimDX::Multimedia::UsageId usageId, DeviceFlags flags, IntPtr target, bool addThreadFilter )
+	void Device::RegisterDevice( UsagePage usagePage, UsageId usageId, DeviceFlags flags, IntPtr target )
 	{
 		RAWINPUTDEVICE device;
 		device.usUsagePage = static_cast<USHORT>( usagePage );
@@ -62,12 +57,6 @@ namespace RawInput
 
 		if( RegisterRawInputDevices( &device, 1, sizeof(RAWINPUTDEVICE) ) <= 0 )
 			throw gcnew Win32Exception();
-
-		if( filter == nullptr && addThreadFilter )
-		{
-			filter = gcnew InputMessageFilter();
-			Application::AddMessageFilter( filter );
-		}
 	}
 
 	void Device::HandleMessage( IntPtr message )
@@ -113,11 +102,11 @@ namespace RawInput
 			else
 			{
 				int length = rawInput->data.hid.dwCount * rawInput->data.hid.dwSizeHid;
-				array<Byte>^ bytes = gcnew array<Byte>( length );
-				for( int i = 0; i < length; i++ )
-					bytes[i] = rawInput->data.hid.bRawData[i];
+				array<Byte>^ bytesArray = gcnew array<Byte>(length);
+				for (int i = 0; i < length; i++)
+					bytesArray[i] = rawInput->data.hid.bRawData[i];
 
-				RawInput( RawInputEventArgs( rawInput->data.hid.dwSizeHid, rawInput->data.hid.dwCount, bytes, IntPtr( rawInput->header.hDevice ) ) );
+				RawInput(RawInputEventArgs(rawInput->data.hid.dwSizeHid, rawInput->data.hid.dwCount, bytesArray, IntPtr(rawInput->header.hDevice)));
 			}
 		}
 		finally

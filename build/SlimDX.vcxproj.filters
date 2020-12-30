@@ -184,6 +184,9 @@
     <Filter Include="DirectWrite">
       <UniqueIdentifier>{71f3f462-c308-48ea-9f04-1ef3292125ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RawInput">
+      <UniqueIdentifier>{a9bed486-88d5-4c0e-a1b9-b18965a857ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\ComObject.cpp">
@@ -726,6 +729,12 @@
     </ClCompile>
     <ClCompile Include="..\source\windows\NativeWindow.cpp">
       <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rawinput\DeviceInfo.cpp">
+      <Filter>RawInput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rawinput\DeviceRI.cpp">
+      <Filter>RawInput</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1332,6 +1341,33 @@
     </ClInclude>
     <ClInclude Include="..\source\windows\NativeWindow.h">
       <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\MouseInfo.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\MouseInputEventArgs.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\RawInputEventArgs.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\DeviceInfo.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\DeviceRI.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\Enums.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\HidInfo.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\KeyboardInfo.h">
+      <Filter>RawInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\rawinput\KeyboardInputEventArgs.h">
+      <Filter>RawInput</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

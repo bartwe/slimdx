@@ -247,6 +247,13 @@ namespace SlimMath
         }
 
         /// <summary>
+        /// Gets the Z and W components of the vector.
+        /// </summary>
+        public Vector3 XYZ {
+            get { Vector3 result; result.X = X; result.Y = Y; result.Z = Z; return result; }
+        }
+
+        /// <summary>
         /// Converts the vector into a unit vector.
         /// </summary>
         public void Normalize()

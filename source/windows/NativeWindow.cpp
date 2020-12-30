@@ -24,11 +24,14 @@
 #include "../InternalHelpers.h"
 
 #include "NativeWindow.h"
+#include "..\RawInput\DeviceRI.h"
 
 using namespace System;
 using namespace System::Drawing;
 using namespace System::ComponentModel;
 using namespace System::Runtime::InteropServices;
+
+using namespace SlimDX::RawInput;
 
 namespace SlimDX
 {
@@ -261,6 +264,11 @@ namespace Windows
 
 	LRESULT NativeWindow::HandleMessage (UINT msg, WPARAM wparam, LPARAM lparam)
 	{
+		if (msg == WM_INPUT)
+		{
+			SlimDX::RawInput::Device::OnWmInput((HRAWINPUT)lparam);
+		}
+		else
 		if (msg == WM_SIZE)
 		{
 			if (wparam == SIZE_MINIMIZED)
